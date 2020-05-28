@@ -25,6 +25,37 @@ body {
     margin: 0;
 }
 
+form button {
+    background-color: #3D518C;
+    border: #3D518C 1px solid;
+    border-radius: 0;
+    color: #FFFFFF;
+    font-size: 100%;
+    padding: 15px 15px 16px 15px;
+}
+
+form button:hover {
+    background-color: #556DB4;
+}
+
+form input, form textarea {
+    border: #3D518C 1px solid;
+    box-sizing: border-box;
+    font-size: 100%;
+    margin-bottom: 24px;
+    padding: 12px;
+    width: 100%;
+}
+
+form label {
+    cursor: pointer;
+    margin-bottom: 6px;
+}
+
+form textarea {
+    min-height: 240px;
+}
+
 header {
     background-color: #fff;
     box-shadow: 0 5px 5px red;
@@ -50,10 +81,24 @@ main {
     padding: 24px;
 }
 
-main h1 {
+main h1, main p.breadcrumbs {
     margin-top: 0;
 }
 
 main img {
     max-width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td, table th {
+    border: #ccc 1px solid;
+    padding: 12px;
+}
+
+table th {
+    background-color: #eee;
 }

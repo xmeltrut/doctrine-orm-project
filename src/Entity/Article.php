@@ -20,7 +20,7 @@ class Article
     private $name;
 
     /**
-     * @Column(type="string")
+     * @Column(type="string", unique=true)
      */
     private $slug;
 
@@ -38,6 +38,16 @@ class Article
      * @Column(type="datetime")
      */
     private $published;
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function setId($value)
+    {
+        $this->id = $value;
+    }
 
     public function getName()
     {
