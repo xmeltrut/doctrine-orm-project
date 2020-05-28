@@ -1,3 +1,24 @@
+.article-list {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.article-list a:link, .article-list a:visited, .article-list a:hover, .article-list a:active {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.article-list article {
+    border-bottom: #666 5px solid;
+}
+
+.article-list h2 {
+    margin: 0;
+    padding: 12px;
+}
+
 body {
     background-color: #eee;
     font-family: 'Noto Sans', sans-serif;

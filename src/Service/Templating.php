@@ -36,6 +36,10 @@ class Templating
                 ]
             )
         ]);
+
+        $this->engine->addHelper('date', function ($value) {
+            return ($value) ? $value->format('j F Y') : null;
+        });
     }
 
     /**

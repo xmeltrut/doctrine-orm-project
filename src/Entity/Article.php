@@ -34,6 +34,11 @@ class Article
      */
     private $body;
 
+    /**
+     * @Column(type="datetime")
+     */
+    private $published;
+
     public function getName()
     {
         return $this->name;
@@ -72,5 +77,15 @@ class Article
     public function setBody($value)
     {
         $this->body = $value;
+    }
+
+    public function getPublished()
+    {
+        return $this->published;
+    }
+
+    public function setPublished($value)
+    {
+        $this->published = $value;
     }
 }
