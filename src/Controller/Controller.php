@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use Psr\Container\ContainerInterface;
+
 abstract class Controller
 {
     /**
@@ -28,7 +30,7 @@ abstract class Controller
      */
     protected function renderPage($response, $template, $data = [])
     {
-        return $this->ci->templating->renderPage(
+        return $this->ci->get('templating')->renderPage(
             $response,
             $template,
             $data

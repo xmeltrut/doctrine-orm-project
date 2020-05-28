@@ -48,7 +48,7 @@ class Templating
      */
     public function renderPage(Response $response, $template, $data = [])
     {
-        $content = $this->engine->render($template, array_merge($this->data, $data));
+        $content = $this->engine->render($template, $data);
 
         $layout = $this->engine->render(
             'layout.html',
