@@ -1,0 +1,34 @@
+body {
+    background-color: #eee;
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 5px 5px red;
+    font-size: 160%;
+    font-weight: bold;
+    padding: 24px;
+    text-align: center;
+}
+
+header a:link, header a:visited, header a:active, header a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+header hr {
+    display: none;
+}
+
+main {
+    background-color: #fff;
+    margin: 24px;
+    max-width: 700px;
+    padding: 24px;
+}
+
+main img {
+    max-width: 100%;
+}

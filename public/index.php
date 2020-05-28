@@ -10,9 +10,9 @@ require('../vendor/autoload.php');
 // register services
 $container = new Container();
 
-/*$container->set('db', function() {
+$container->set('db', function() {
     return DatabaseFactory::create();
-});*/
+});
 
 $container->set('templating', function() {
     return new Templating;
@@ -25,7 +25,7 @@ $app = AppFactory::create();
 
 // define page routes
 $app->get('/', '\App\Controller\DefaultController:homepage');
-//$app->get('/', \App\Controller\DefaultController::class . ':homepage');
+$app->get('/article/{slug}', '\App\Controller\ArticleController:view');
 
 // finish
 $app->run();
