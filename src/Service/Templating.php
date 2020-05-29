@@ -9,6 +9,7 @@ use Psr\Http\Message\ResponseInterface as Response;
 class Templating
 {
     private $engine;
+    private $data = [];
 
     /**
      * Constructor. Set up template engine.
@@ -52,14 +53,26 @@ class Templating
      */
     public function renderPage(Response $response, $template, $data = [])
     {
-        $content = $this->engine->render($template, $data);
+        $content = $this->engine->render($template, array_merge($this->data, $data));
 
         $layout = $this->engine->render(
             'layout.html',
-            array_merge($data, ['body' => $content])
+            array_merge($this->data, $data, ['body' => $content])
         );
 
         $response->getBody()->write($layout);
         return $response;
+    }
+
+    /**
+     * Set a data field.
+     *
+     * @param string $key   Key.
+     * @param mixed  $value Value.
+     * @return void
+     */
+    public function setData($key, $value)
+    {
+        $this->data[$key] = $value;
     }
 }

@@ -1,3 +1,11 @@
+.alert {
+    background-color: #B83E3E;
+    color: #fff;
+    margin: 24px;
+    max-width: 700px;
+    padding: 24px;
+}
+
 .article-list {
     display: grid;
     grid-gap: 24px;
@@ -36,6 +44,15 @@ form button {
 
 form button:hover {
     background-color: #556DB4;
+}
+
+form button.danger {
+    background-color: #B83E3E;
+    border: #B83E3E 1px solid;
+}
+
+form button.danger:hover {
+    background-color: #eb5050;
 }
 
 form input, form textarea {
