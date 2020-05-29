@@ -25,6 +25,11 @@ class DatabaseFactory
             'dbname'   => 'doctrineorm',
             'charset'  => 'utf8'
         ];
+
+        /*$dbParams = [
+            'driver'   => 'pdo_sqlite',
+            'path'     => __DIR__ . '/../../database.sqlite'
+        ];*/
         
         // obtaining the entity manager
         return EntityManager::create($dbParams, $metadata);

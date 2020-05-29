@@ -13,7 +13,7 @@ class AuthorController extends Controller
         $author = $this->ci->get('db')->find('App\Entity\Author', $args['id']);
 
         if (!$author) {
-            throw new HttpNotFoundException;
+            throw new HttpNotFoundException($request);
         }
 
         $dql = "SELECT a FROM App\Entity\Article a
