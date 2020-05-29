@@ -39,6 +39,11 @@ class Article
      */
     private $published;
 
+    /**
+     * @ManyToOne(targetEntity="Author", inversedBy="articles")
+     */
+    private $author;
+
     public function getId()
     {
         return $this->id;
@@ -97,5 +102,15 @@ class Article
     public function setPublished($value)
     {
         $this->published = $value;
+    }
+
+    public function getAuthor()
+    {
+        return $this->author;
+    }
+
+    public function setAuthor(Author $value)
+    {
+        $this->author = $value;
     }
 }
