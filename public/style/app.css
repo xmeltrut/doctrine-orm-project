@@ -55,7 +55,7 @@ form button.danger:hover {
     background-color: #eb5050;
 }
 
-form input, form textarea {
+form input, form select, form textarea {
     border: #3D518C 1px solid;
     box-sizing: border-box;
     font-size: 100%;
@@ -67,6 +67,13 @@ form input, form textarea {
 form label {
     cursor: pointer;
     margin-bottom: 6px;
+}
+
+form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
 }
 
 form textarea {

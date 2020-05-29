@@ -3,7 +3,7 @@
 {{#article}}
 <h1>{{getName}}</h1>
 
-<p>Published {{getPublished | date}}</p>
+<p>Published {{getPublished | date}} by {{#getAuthor}}{{getName}}{{/getAuthor}}</p>
 
 <p><img src="/images/{{getImage}}" alt=""></p>
 
