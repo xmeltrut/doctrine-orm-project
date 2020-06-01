@@ -1,6 +1,5 @@
 <?php
 
-use App\Service\DatabaseFactory;
 use App\Service\Templating;
 use DI\Container;
 use Slim\Factory\AppFactory;
