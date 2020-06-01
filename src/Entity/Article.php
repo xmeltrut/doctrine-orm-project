@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use DateTime;
+
 /**
  * @Entity
  */
@@ -99,7 +101,7 @@ class Article
         return $this->published;
     }
 
-    public function setPublished($value)
+    public function setPublished(DateTime $value)
     {
         $this->published = $value;
     }
